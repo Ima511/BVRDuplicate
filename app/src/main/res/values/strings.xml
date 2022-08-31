@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BVRApp</string>
+    <string name="bestViewReviewsHeading">Best Views \nReviews</string>
+    <string name="bvr_commission_text">BestViewsReviews earns a commission from qualifying purchases.</string>
+    <string name="countertop_microwave">Countertop \n Microwave</string>
+    <string name="logo_of_bvr">Logo of BVR</string>
+</resources>
