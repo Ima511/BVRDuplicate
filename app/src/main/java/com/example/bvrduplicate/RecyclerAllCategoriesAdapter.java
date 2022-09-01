@@ -12,50 +12,45 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
+public class RecyclerAllCategoriesAdapter extends RecyclerView.Adapter<RecyclerAllCategoriesAdapter.ViewHolder> {
 
-    ArrayList<MainData> dataArrayList;
-    Context activity;
+    ArrayList<DataModel> arrDataModel;
+    Context context;
+    RecyclerAllCategoriesAdapter(Context context, ArrayList<DataModel> arrDataModel){
+        this.context = context;
+        this.arrDataModel = arrDataModel;
 
-    public MainAdapter(ArrayList<MainData> dataArrayList, Context activity) {
-        this.dataArrayList = dataArrayList;
-        this.activity = activity;
     }
 
+    @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(activity)
-                .inflate(R.layout.list_allcategories_item,parent,false);
+
+      View view =  LayoutInflater.from(context).inflate(R.layout.list_allcategories_item,parent,false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        MainData data = dataArrayList.get(position);
-
+        holder.sampleText.setText(arrDataModel.get(position).productName);
 
 
     }
 
     @Override
     public int getItemCount() {
-        return dataArrayList.size();
+        return arrDataModel.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-
-        View sampleView;
-        ImageView sampleImage;
         TextView sampleText;
-
+        ImageView pic;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            sampleView = itemView.findViewById(R.id.viewImgMicrowave);
-            sampleImage = itemView.findViewById(R.id.imgMicrowave);
-            sampleText = itemView.findViewById(R.id.textView5);
-
+            sampleText = (TextView) itemView.findViewById(R.id.textView5);
+            pic = (ImageView) itemView.findViewById(R.id.imgMicrowave);
 
         }
     }

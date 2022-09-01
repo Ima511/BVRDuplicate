@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     tools:context=".MainActivity"
+
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -78,22 +79,24 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
+        <!--  app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" -->
+        <!-- app:spanCount="3" -->
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            android:orientation="horizontal"
             android:layout_marginTop="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvCommision"
-            app:spanCount="3"
-            tools:listitem="@layout/list_allcategories_item"
 
-            />
+
+            tools:listitem="@layout/list_allcategories_item" />
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
             android:layout_width="0dp"
             android:layout_height="205dp"
             android:layout_marginStart="8dp"

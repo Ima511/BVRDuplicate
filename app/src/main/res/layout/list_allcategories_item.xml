@@ -2,22 +2,22 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:id="@+id/list_data_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
 
-
-    >
 
     <View
         android:id="@+id/viewImgMicrowave"
         android:layout_width="56dp"
         android:layout_height="56dp"
-        android:background="@drawable/bg_allcategories_pic"
+        android:layout_marginStart="16dp"
 
-        app:layout_constraintEnd_toStartOf="@+id/viewImgMicrowave6"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_allcategories_pic"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imgMicrowave"
@@ -26,132 +26,40 @@
         app:layout_constraintBottom_toBottomOf="@+id/viewImgMicrowave"
         app:layout_constraintEnd_toEndOf="@+id/viewImgMicrowave"
         app:layout_constraintStart_toStartOf="@+id/viewImgMicrowave"
-        app:layout_constraintTop_toTopOf="@+id/viewImgMicrowave"
-        app:srcCompat="@drawable/microwave" />
+        app:layout_constraintTop_toTopOf="@+id/viewImgMicrowave" />
 
+    <!-- app:srcCompat="@drawable/microwave" -->
+
+
+    <!--  android:text="Coutertop \n Microwave..." -->
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="wrap_content"
+        android:layout_width="86dp"
         android:layout_height="wrap_content"
+
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/dm_sans"
-        android:text="Coutertop \n Microwave..."
         android:textAlignment="center"
         android:textColor="@color/list_item_text_color"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/viewImgMicrowave"
-        app:layout_constraintStart_toStartOf="@+id/viewImgMicrowave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewImgMicrowave" />
 
-    <View
-        android:id="@+id/viewImgMicrowave6"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
 
-        android:background="@drawable/bg_allcategories_pic"
-        app:layout_constraintEnd_toStartOf="@+id/viewImgMicrowave7"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/viewImgMicrowave"
-        tools:layout_editor_absoluteY="16dp" />
+    <!--app:srcCompat="@drawable/microwave" -->
 
 
-    <ImageView
-        android:id="@+id/imgMicrowave4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <!--  android:text="Coutertop \n Microwave..."-->
 
-        app:layout_constraintBottom_toBottomOf="@+id/viewImgMicrowave6"
-        app:layout_constraintEnd_toEndOf="@+id/viewImgMicrowave6"
-        app:layout_constraintHorizontal_bias="0.411"
-        app:layout_constraintStart_toStartOf="@+id/viewImgMicrowave6"
-        app:layout_constraintTop_toTopOf="@+id/viewImgMicrowave6"
-        app:srcCompat="@drawable/microwave" />
+    <!--app:srcCompat="@drawable/microwave" -->
 
+    <!--         android:text="Coutertop \n Microwave..." -->
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/dm_sans"
-        android:text="Coutertop \n Microwave..."
-        android:textAlignment="center"
-        android:textColor="@color/list_item_text_color"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/viewImgMicrowave6"
-        app:layout_constraintStart_toStartOf="@+id/viewImgMicrowave6"
-        app:layout_constraintTop_toBottomOf="@+id/viewImgMicrowave6" />
+    <!--app:srcCompat="@drawable/microwave" -->
 
-    <View
-        android:id="@+id/viewImgMicrowave7"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-
-        android:background="@drawable/bg_allcategories_pic"
-        app:layout_constraintEnd_toStartOf="@+id/viewImgMicrowave9"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/viewImgMicrowave6"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <ImageView
-        android:id="@+id/imgMicrowave8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-
-        app:layout_constraintBottom_toBottomOf="@+id/viewImgMicrowave7"
-        app:layout_constraintEnd_toEndOf="@+id/viewImgMicrowave7"
-        app:layout_constraintStart_toStartOf="@+id/viewImgMicrowave7"
-        app:layout_constraintTop_toTopOf="@+id/viewImgMicrowave7"
-        app:srcCompat="@drawable/microwave" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/dm_sans"
-        android:text="Coutertop \n Microwave..."
-        android:textAlignment="center"
-        android:textColor="@color/list_item_text_color"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/viewImgMicrowave7"
-        app:layout_constraintStart_toStartOf="@+id/viewImgMicrowave7"
-        app:layout_constraintTop_toBottomOf="@+id/viewImgMicrowave7" />
-
-    <View
-        android:id="@+id/viewImgMicrowave9"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-
-        android:background="@drawable/bg_allcategories_pic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/viewImgMicrowave7"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <ImageView
-        android:id="@+id/imgMicrowave9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-
-        app:layout_constraintBottom_toBottomOf="@+id/viewImgMicrowave9"
-        app:layout_constraintEnd_toEndOf="@+id/viewImgMicrowave9"
-        app:layout_constraintStart_toStartOf="@+id/viewImgMicrowave9"
-        app:layout_constraintTop_toTopOf="@+id/viewImgMicrowave9"
-        app:srcCompat="@drawable/microwave" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/dm_sans"
-        android:text="Coutertop \n Microwave..."
-        android:textAlignment="center"
-        android:textColor="@color/list_item_text_color"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/viewImgMicrowave9"
-        app:layout_constraintStart_toStartOf="@+id/viewImgMicrowave9"
-        app:layout_constraintTop_toBottomOf="@+id/viewImgMicrowave9" />
+    <!--         android:text="Coutertop \n Microwave..."-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
