@@ -42,10 +42,10 @@ ArrayList<DataModel> arrDataModel = new ArrayList<>();
 //            DataModel dataModel12 = new DataModel(Picasso.get().load("https://d1wi0fywfu3s5z.cloudfront.net/media/smart-tv/images/smart-tv.png"),"Smart TVs");
 
 
-        DataModel dataModel1 = new DataModel(R.drawable.a,"Countertop Microwave owen");
+        DataModel dataModel1 = new DataModel(R.drawable.a,"Countertop Microwave...");
         DataModel dataModel2 = new DataModel(R.drawable. b, "Steam Mops");
-        DataModel dataModel3 = new DataModel(R.drawable.c, "Stand-Up Paddleboards");
-        DataModel dataModel4 = new DataModel(R.drawable.d, "Portable Air Conditioners");
+        DataModel dataModel3 = new DataModel(R.drawable.c, "Stand-Up Paddlebo...");
+        DataModel dataModel4 = new DataModel(R.drawable.d, "Portable Air Condi...");
         DataModel dataModel5 = new DataModel(R.drawable. b, "Inkjet Printers");
         DataModel dataModel6 = new DataModel(R.drawable. b, "Computer Monitors");
         DataModel dataModel7 = new DataModel(R.drawable. b, "Exercise Bikes");
