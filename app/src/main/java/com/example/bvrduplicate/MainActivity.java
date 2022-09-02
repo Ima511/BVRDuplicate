@@ -42,18 +42,18 @@ ArrayList<DataModel> arrDataModel = new ArrayList<>();
 //            DataModel dataModel12 = new DataModel(Picasso.get().load("https://d1wi0fywfu3s5z.cloudfront.net/media/smart-tv/images/smart-tv.png"),"Smart TVs");
 
 
-        DataModel dataModel1 = new DataModel(R.drawable.a,"Countertop Microwave...");
-        DataModel dataModel2 = new DataModel(R.drawable. b, "Steam Mops");
-        DataModel dataModel3 = new DataModel(R.drawable.c, "Stand-Up Paddlebo...");
-        DataModel dataModel4 = new DataModel(R.drawable.d, "Portable Air Condi...");
-        DataModel dataModel5 = new DataModel(R.drawable. b, "Inkjet Printers");
-        DataModel dataModel6 = new DataModel(R.drawable. b, "Computer Monitors");
-        DataModel dataModel7 = new DataModel(R.drawable. b, "Exercise Bikes");
-        DataModel dataModel8 = new DataModel(R.drawable. b, "Laptops");
-        DataModel dataModel9 = new DataModel(R.drawable. b, "Video Projectors");
-        DataModel dataModel10 = new DataModel(R.drawable. b, "Air Fryers");
-        DataModel dataModel11 = new DataModel(R.drawable. b, "Treadmills");
-        DataModel dataModel12 = new DataModel(R.drawable. b, "Smart TVs");
+        DataModel dataModel1 = new DataModel("https://d1wi0fywfu3s5z.cloudfront.net/media/countertop-microwave-oven/images/Countertop_Microwave_Oven_small.png", "Countertop Microwave...");
+        DataModel dataModel2 = new DataModel("https://d1wi0fywfu3s5z.cloudfront.net/media/steam-mops/images/Steam-Mops.png", "Steam Mops");
+        DataModel dataModel3 = new DataModel("https://d1wi0fywfu3s5z.cloudfront.net/media/stand-up-paddleboards/images/stand-up-paddleboards.png", "Stand-Up Paddlebo...");
+        DataModel dataModel4 = new DataModel("https://d1wi0fywfu3s5z.cloudfront.net/media/portable-air-conditioners/images/portable-air-conditioners.png", "Portable Air Condi...");
+        DataModel dataModel5 = new DataModel("https://d1wi0fywfu3s5z.cloudfront.net/media/inkjet-printers/images/inkjet-printers.png", "Inkjet Printers");
+        DataModel dataModel6 = new DataModel("https://d1wi0fywfu3s5z.cloudfront.net/media/computer-monitors/images/computer-monitors.png", "Computer Monitors");
+        DataModel dataModel7 = new DataModel("https://d1wi0fywfu3s5z.cloudfront.net/media/exercise-bike/images/Exercise_Bike_small.png", "Exercise Bikes");
+        DataModel dataModel8 = new DataModel("https://d1wi0fywfu3s5z.cloudfront.net/media/laptop/images/laptop_transparent-laptop_small.png", "Laptops");
+        DataModel dataModel9 = new DataModel("https://d1wi0fywfu3s5z.cloudfront.net/media/video-projector/images/video-projector.png", "Video Projectors");
+        DataModel dataModel10 = new DataModel("https://d1wi0fywfu3s5z.cloudfront.net/media/air-fryers/images/airfryers_transparent-air-fryers_small.png", "Air Fryers");
+        DataModel dataModel11 = new DataModel("https://d1wi0fywfu3s5z.cloudfront.net/media/treadmill/images/treadmill_transparent-treadmill_bdfpM2g_small.png", "Treadmills");
+        DataModel dataModel12 = new DataModel("https://d1wi0fywfu3s5z.cloudfront.net/media/smart-tv/images/smart-tv.png", "Smart TVs");
 
         arrDataModel.add(dataModel1);
         arrDataModel.add(dataModel2);

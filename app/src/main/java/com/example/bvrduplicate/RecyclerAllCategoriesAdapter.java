@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 public class RecyclerAllCategoriesAdapter extends RecyclerView.Adapter<RecyclerAllCategoriesAdapter.ViewHolder> {
@@ -32,8 +34,11 @@ public class RecyclerAllCategoriesAdapter extends RecyclerView.Adapter<RecyclerA
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+            final DataModel listItem = arrDataModel.get(position);
         holder.sampleText.setText(arrDataModel.get(position).productName);
+
+       Picasso.get().load(listItem.getImage()).into(holder.pic);
+
 
 
     }

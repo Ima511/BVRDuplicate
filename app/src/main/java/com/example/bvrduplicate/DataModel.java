@@ -5,11 +5,26 @@ import android.widget.ImageView;
 import com.squareup.picasso.RequestCreator;
 
 public class DataModel {
+    public String getImage() {
+        return image;
+    }
 
-   int image;
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    String image;
     String productName;
 
-    public DataModel(int image, String productName){
+    public DataModel(String image, String productName){
 
         this.image = image;
         this.productName= productName;

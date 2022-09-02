@@ -26,7 +26,10 @@
         app:layout_constraintBottom_toBottomOf="@+id/viewImgMicrowave"
         app:layout_constraintEnd_toEndOf="@+id/viewImgMicrowave"
         app:layout_constraintStart_toStartOf="@+id/viewImgMicrowave"
-        app:layout_constraintTop_toTopOf="@+id/viewImgMicrowave" />
+        app:layout_constraintTop_toTopOf="@+id/viewImgMicrowave"
+
+
+        />
 
     <!-- app:srcCompat="@drawable/microwave" -->
 
