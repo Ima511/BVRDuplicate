@@ -1,5 +1,7 @@
 package com.example.bvrduplicate;
 
+// This Adapter class belong to recyclerView1 (All categories product portion)
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +17,8 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 public class RecyclerAllCategoriesAdapter extends RecyclerView.Adapter<RecyclerAllCategoriesAdapter.ViewHolder> {
+
+
 
     ArrayList<DataModel> arrDataModel;
     Context context;

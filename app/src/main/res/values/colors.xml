@@ -13,4 +13,5 @@
     <color name="list_item_text_color">#4F4E4E</color>
     <color name="start_pink_color">#FFD1CF</color>
     <color name="end_pink_color">#FFEAEA</color>
+    <color name="light_gray">#EDEDED</color>
 </resources>

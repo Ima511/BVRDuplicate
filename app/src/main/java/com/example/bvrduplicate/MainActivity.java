@@ -14,10 +14,11 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    RecyclerView recyclerView ;
+    RecyclerView recyclerView , recyclerViewtwo;
     ImageView imageView;
 
 ArrayList<DataModel> arrDataModel = new ArrayList<>();
+ArrayList<DataModelTwo> arrDataModelTwo = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +26,7 @@ ArrayList<DataModel> arrDataModel = new ArrayList<>();
         imageView = (ImageView) findViewById(R.id.imgMicrowave);
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView1);
+        recyclerViewtwo = (RecyclerView) findViewById(R.id.recyclerView2);
 
 
 //
@@ -72,8 +74,7 @@ ArrayList<DataModel> arrDataModel = new ArrayList<>();
         // added data from arraylist to adapter class.
         RecyclerAllCategoriesAdapter adapter = new RecyclerAllCategoriesAdapter(this,arrDataModel);
 
-
-
+        // Gridlayout Manager declared for 1st recyclerview
         GridLayoutManager layoutManager = new GridLayoutManager(this,4){
             @Override
             public boolean canScrollVertically() {
@@ -81,6 +82,39 @@ ArrayList<DataModel> arrDataModel = new ArrayList<>();
             }
         };
 
+        recyclerView.setLayoutManager(layoutManager);
+
+
+        // GridLayout manager declared for 2nd recyclerView
+        GridLayoutManager layoutManagerTwo = new GridLayoutManager(this, 2){
+            @Override
+            public boolean canScrollVertically() {
+                return false;
+            }
+        };
+
+        recyclerViewtwo.setLayoutManager(layoutManagerTwo);
+        recyclerView.setAdapter(adapter);
+
+
+        // Adapter of second recycler view
+
+        DataModelTwo dataModelTwo1 = new DataModelTwo("Boxed Chocolates","29399", "https://m.media-amazon.com/images/I/51CFwi9sUML._SL500_.jpg");
+        DataModelTwo dataModelTwo2 = new DataModelTwo("Smartwatches","582407","https://m.media-amazon.com/images/I/41EIyco72mL._SL500_.jpg" );
+        DataModelTwo dataModelTwo3 = new DataModelTwo("Wine Chillers","8874","https://m.media-amazon.com/images/I/31kV2Tuh6YL._SL500_.jpg" );
+        DataModelTwo dataModelTwo4 = new DataModelTwo("Dinnerware & Serveware Sets","85176","https://m.media-amazon.com/images/I/51R5h+TXNCL._SL500_.jpg" );
+        DataModelTwo dataModelTwo5 = new DataModelTwo("Building Toys","123088","https://m.media-amazon.com/images/I/51dfbsjyfOL._SL500_.jpg" );
+        DataModelTwo dataModelTwo6 = new DataModelTwo("Wine Glasses","94625","https://m.media-amazon.com/images/I/51HuKa1gohL._SL500_.jpg" );
+
+       arrDataModelTwo.add(dataModelTwo1);
+       arrDataModelTwo.add(dataModelTwo2);
+       arrDataModelTwo.add(dataModelTwo3);
+       arrDataModelTwo.add(dataModelTwo4);
+       arrDataModelTwo.add(dataModelTwo5);
+       arrDataModelTwo.add(dataModelTwo6);
+
+       RecyclerTwoHomeAdapter adapter1 = new RecyclerTwoHomeAdapter(this,arrDataModelTwo);
+       recyclerViewtwo.setAdapter(adapter1);
 
 
 //        layoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
@@ -93,11 +127,7 @@ ArrayList<DataModel> arrDataModel = new ArrayList<>();
 //            }
 //        });
 
-        recyclerView.setLayoutManager(layoutManager);
 
-
-
-        recyclerView.setAdapter(adapter);
 
 
     }

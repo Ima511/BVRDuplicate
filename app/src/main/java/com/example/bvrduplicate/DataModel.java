@@ -5,6 +5,18 @@ import android.widget.ImageView;
 import com.squareup.picasso.RequestCreator;
 
 public class DataModel {
+
+    String image;
+    String productName;
+
+
+    public DataModel(String image, String productName){
+
+        this.image = image;
+        this.productName= productName;
+
+    }
+
     public String getImage() {
         return image;
     }
@@ -21,18 +33,9 @@ public class DataModel {
         this.productName = productName;
     }
 
-    String image;
-    String productName;
-
-    public DataModel(String image, String productName){
-
-        this.image = image;
-        this.productName= productName;
-
-    }
 
 
-    public DataModel(RequestCreator load, String countertop_microwave_ovens) {
 
-    }
+
+
 }
