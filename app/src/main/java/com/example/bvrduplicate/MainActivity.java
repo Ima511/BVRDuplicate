@@ -1,6 +1,7 @@
 package com.example.bvrduplicate;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -13,7 +14,7 @@ import com.squareup.picasso.RequestCreator;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
+    Toolbar toolbar;
     RecyclerView recyclerView , recyclerViewtwo;
     ImageView imageView;
 
@@ -24,6 +25,8 @@ ArrayList<DataModelTwo> arrDataModelTwo = new ArrayList<>();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         imageView = (ImageView) findViewById(R.id.imgMicrowave);
+        setSupportActionBar(toolbar);
+
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView1);
         recyclerViewtwo = (RecyclerView) findViewById(R.id.recyclerView2);

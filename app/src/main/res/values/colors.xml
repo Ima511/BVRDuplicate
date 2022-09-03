@@ -10,8 +10,10 @@
     <color name="norificatoinBar">#2B3541</color>
     <color name="gray_shade_1">#EDEDED</color>
     <color name="gray_shade_2">#F2F2F2</color>
+    <color name="gray_shade_3">#979797</color>
     <color name="list_item_text_color">#4F4E4E</color>
     <color name="start_pink_color">#FFD1CF</color>
     <color name="end_pink_color">#FFEAEA</color>
     <color name="light_gray">#EDEDED</color>
+    <color name="white_fifty">#80FFFFFF</color>
 </resources>
