@@ -350,7 +350,15 @@ public class QueryUtilsRecOne {
 //                String productName = jsonObject.optString("label").toString();
 
                 String productName = jsonObject.getString("label");
-                String image = "https://d1wi0fywfu3s5z.cloudfront.net/media/" + jsonObject.getString("home_page_image");
+                String image;
+
+                if(jsonObject.getString("home_page_image").isEmpty()){
+                    image = "https://s3-us-west-2.amazonaws.com/data.bestviewsreviews.com/CATEGORY_IMG/no-image.jpg";
+                }else{
+                    image = "https://d1wi0fywfu3s5z.cloudfront.net/media/" + jsonObject.getString("home_page_image");
+
+                }
+
 
                 DataModel dataModel = new DataModel(image,productName);
                 dataModels.add(dataModel);
