@@ -20,11 +20,11 @@ public class RecyclerAllCategoriesAdapter extends RecyclerView.Adapter<RecyclerA
 
 
 
-    ArrayList<DataModel> arrDataModel;
+    ArrayList<DataModel> dataModels;
     Context context;
-    RecyclerAllCategoriesAdapter(Context context, ArrayList<DataModel> arrDataModel){
+    RecyclerAllCategoriesAdapter(Context context, ArrayList<DataModel> dataModels){
         this.context = context;
-        this.arrDataModel = arrDataModel;
+        this.dataModels = dataModels;
 
     }
 
@@ -38,8 +38,8 @@ public class RecyclerAllCategoriesAdapter extends RecyclerView.Adapter<RecyclerA
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-            final DataModel listItem = arrDataModel.get(position);
-        holder.sampleText.setText(arrDataModel.get(position).productName);
+            final DataModel listItem = dataModels.get(position);
+        holder.sampleText.setText(dataModels.get(position).productName);
 
        Picasso.get().load(listItem.getImage()).into(holder.pic);
 
@@ -49,7 +49,7 @@ public class RecyclerAllCategoriesAdapter extends RecyclerView.Adapter<RecyclerA
 
     @Override
     public int getItemCount() {
-        return arrDataModel.size();
+        return dataModels.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
