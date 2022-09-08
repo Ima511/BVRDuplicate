@@ -12,4 +12,21 @@
     <string name="udate_date">Updated on Feb 17, 2022</string>
     <string name="subtitle_divider">|</string>
     <string name="reviews_subtitle">Based on 9,000 reviews</string>
+    <string name="rank">Rank</string>
+    <string name="rank_value">#1</string>
+    <string name="product_description">MSI GL65 Leopard 10SFK-062 Gaming Laptop</string>
+    <string name="check_price_at">Check price at</string>
+    <string name="amazon">Amazon</string>
+    <string name="bvr_ratings">BVR Rating</string>
+    <string name="no_of_reviews_on_category_page">Based on 678 reviews</string>
+    <string name="battery">Battery</string>
+    <string name="camera">Camera</string>
+    <string name="control_and_functionality">Controls and Functiona...</string>
+    <string name="processor">Processor</string>
+    <string name="pros">Pros</string>
+    <string name="pros_1">Built-in 4500mAh battery offers long-lasting battery life with 18W fast charging</string>
+    <string name="text_pros_2">Enabled by True-depth camera for facial recognition that offers safety and security</string>
+    <string name="textview_prso_3">EIP67 water-resistant build can stay under-water for maximum depth of 1 meter up to 30 minutes</string>
+    <string name="cons">Cons</string>
+    <string name="text_cons_1">Not water-proof</string>
 </resources>
