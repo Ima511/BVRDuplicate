@@ -6,8 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
+    android:layout_marginEnd="2dp"
+    android:layout_marginStart="2dp"
 
-   >
+
+    >
 
 
     <!--
@@ -29,13 +32,12 @@
         android:layout_height="wrap_content"
         android:background="@drawable/bg_allcategories_pic"
         android:gravity="center"
-
+        android:padding="10dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:orientation="vertical"
-        >
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imgMicrowave"
@@ -49,8 +51,6 @@
 
             />
 
-
-
     </LinearLayout>
 
     <TextView
@@ -58,8 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
+
         android:fontFamily="@font/dm_sans"
         android:text="textView"
         android:textAlignment="center"
@@ -73,26 +72,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
-    <!-- app:srcCompat="@drawable/microwave" -->
-
-
-    <!--  android:text="Coutertop \n Microwave..." -->
-
-
-
-
-    <!--app:srcCompat="@drawable/microwave" -->
-
-
-    <!--  android:text="Coutertop \n Microwave..."-->
-
-    <!--app:srcCompat="@drawable/microwave" -->
-
-    <!--         android:text="Coutertop \n Microwave..." -->
-
-    <!--app:srcCompat="@drawable/microwave" -->
-
-    <!--         android:text="Coutertop \n Microwave..."-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

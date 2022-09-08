@@ -5,7 +5,9 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
@@ -16,23 +18,32 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
     RecyclerView recyclerView , recyclerViewtwo;
-    ImageView imageView;
+    ImageView imageView, forwardArrow;
 
-ArrayList<DataModel> arrDataModel = new ArrayList<>();
-ArrayList<DataModelTwo> arrDataModelTwo = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         imageView = (ImageView) findViewById(R.id.imgMicrowave);
+        forwardArrow = (ImageView) findViewById(R.id.ivForwardArrow);
         setSupportActionBar(toolbar);
-
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView1);
         recyclerViewtwo = (RecyclerView) findViewById(R.id.recyclerView2);
 
+        // ForwardArrow functionality
+
+        forwardArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, CategoryPageActivity.class);
+                startActivity(intent);
+            }
+        });
+
         // Get the list of earthquakes from {@link QueryUtils}
         ArrayList<DataModel> dataModels= QueryUtilsRecOne.extractDataModel();
+        ArrayList<DataModelTwo> dataModelesTwo = QueryUtilsRecTwo.extractDataModelTwo();
 
 
 //
@@ -104,22 +115,22 @@ ArrayList<DataModelTwo> arrDataModelTwo = new ArrayList<>();
 
 
         // Adapter of second recycler view
+//
+//        DataModelTwo dataModelTwo1 = new DataModelTwo("Boxed Chocolates","29399", "https://m.media-amazon.com/images/I/51CFwi9sUML._SL500_.jpg");
+//        DataModelTwo dataModelTwo2 = new DataModelTwo("Smartwatches","582407","https://m.media-amazon.com/images/I/41EIyco72mL._SL500_.jpg" );
+//        DataModelTwo dataModelTwo3 = new DataModelTwo("Wine Chillers","8874","https://m.media-amazon.com/images/I/31kV2Tuh6YL._SL500_.jpg" );
+//        DataModelTwo dataModelTwo4 = new DataModelTwo("Dinnerware & Serveware Sets","85176","https://m.media-amazon.com/images/I/51R5h+TXNCL._SL500_.jpg" );
+//        DataModelTwo dataModelTwo5 = new DataModelTwo("Building Toys","123088","https://m.media-amazon.com/images/I/51dfbsjyfOL._SL500_.jpg" );
+//        DataModelTwo dataModelTwo6 = new DataModelTwo("Wine Glasses","94625","https://m.media-amazon.com/images/I/51HuKa1gohL._SL500_.jpg" );
+//
+//       arrDataModelTwo.add(dataModelTwo1);
+//       arrDataModelTwo.add(dataModelTwo2);
+//       arrDataModelTwo.add(dataModelTwo3);
+//       arrDataModelTwo.add(dataModelTwo4);
+//       arrDataModelTwo.add(dataModelTwo5);
+//       arrDataModelTwo.add(dataModelTwo6);
 
-        DataModelTwo dataModelTwo1 = new DataModelTwo("Boxed Chocolates","29399", "https://m.media-amazon.com/images/I/51CFwi9sUML._SL500_.jpg");
-        DataModelTwo dataModelTwo2 = new DataModelTwo("Smartwatches","582407","https://m.media-amazon.com/images/I/41EIyco72mL._SL500_.jpg" );
-        DataModelTwo dataModelTwo3 = new DataModelTwo("Wine Chillers","8874","https://m.media-amazon.com/images/I/31kV2Tuh6YL._SL500_.jpg" );
-        DataModelTwo dataModelTwo4 = new DataModelTwo("Dinnerware & Serveware Sets","85176","https://m.media-amazon.com/images/I/51R5h+TXNCL._SL500_.jpg" );
-        DataModelTwo dataModelTwo5 = new DataModelTwo("Building Toys","123088","https://m.media-amazon.com/images/I/51dfbsjyfOL._SL500_.jpg" );
-        DataModelTwo dataModelTwo6 = new DataModelTwo("Wine Glasses","94625","https://m.media-amazon.com/images/I/51HuKa1gohL._SL500_.jpg" );
-
-       arrDataModelTwo.add(dataModelTwo1);
-       arrDataModelTwo.add(dataModelTwo2);
-       arrDataModelTwo.add(dataModelTwo3);
-       arrDataModelTwo.add(dataModelTwo4);
-       arrDataModelTwo.add(dataModelTwo5);
-       arrDataModelTwo.add(dataModelTwo6);
-
-       RecyclerTwoHomeAdapter adapter1 = new RecyclerTwoHomeAdapter(this,arrDataModelTwo);
+       RecyclerTwoHomeAdapter adapter1 = new RecyclerTwoHomeAdapter(this,dataModelesTwo);
        recyclerViewtwo.setAdapter(adapter1);
 
 

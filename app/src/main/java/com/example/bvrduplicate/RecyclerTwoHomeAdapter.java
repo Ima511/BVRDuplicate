@@ -16,12 +16,12 @@ import java.util.ArrayList;
 
 public class RecyclerTwoHomeAdapter extends RecyclerView.Adapter<RecyclerTwoHomeAdapter.ViewHolder> {
 
-    ArrayList<DataModelTwo> arrayDataModelTwo = new ArrayList<>();
+    ArrayList<DataModelTwo> dataModelesTwo = new ArrayList<>();
     Context context ;
 
-    RecyclerTwoHomeAdapter(Context context, ArrayList<DataModelTwo> arrayDataModelTwo){
+    RecyclerTwoHomeAdapter(Context context, ArrayList<DataModelTwo> dataModelesTwo){
         this.context = context;
-        this.arrayDataModelTwo = arrayDataModelTwo;
+        this.dataModelesTwo = dataModelesTwo;
     }
 
     @NonNull
@@ -34,9 +34,9 @@ public class RecyclerTwoHomeAdapter extends RecyclerView.Adapter<RecyclerTwoHome
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        final DataModelTwo listItemTwo = arrayDataModelTwo.get(position);
-        holder.productName.setText(arrayDataModelTwo.get(position).productName);
-        holder.numberOfReviews.setText(arrayDataModelTwo.get(position).numberOfReview);
+        final DataModelTwo listItemTwo = dataModelesTwo.get(position);
+        holder.productName.setText(dataModelesTwo.get(position).productName);
+        holder.numberOfReviews.setText(dataModelesTwo.get(position).numberOfReview);
 
         Picasso.get().load(listItemTwo.getImage()).into(holder.productImage);
 
@@ -44,7 +44,7 @@ public class RecyclerTwoHomeAdapter extends RecyclerView.Adapter<RecyclerTwoHome
 
     @Override
     public int getItemCount() {
-       return arrayDataModelTwo.size();
+       return dataModelesTwo.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

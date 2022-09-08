@@ -41,8 +41,11 @@ public class RecyclerAllCategoriesAdapter extends RecyclerView.Adapter<RecyclerA
             final DataModel listItem = dataModels.get(position);
         holder.sampleText.setText(dataModels.get(position).productName);
 
-       Picasso.get().load(listItem.getImage()).into(holder.pic);
-
+       try{
+           Picasso.get().load(listItem.getImage()).into(holder.pic);
+       } catch (Exception e) {
+           e.printStackTrace();
+       }
 
 
     }
