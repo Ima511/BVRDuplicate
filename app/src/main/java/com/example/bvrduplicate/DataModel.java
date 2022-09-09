@@ -4,6 +4,8 @@ import android.widget.ImageView;
 
 import com.squareup.picasso.RequestCreator;
 
+// This class belongs to recycler view 1 of Homepage
+
 public class DataModel {
 
     String image;

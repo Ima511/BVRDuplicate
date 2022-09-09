@@ -29,4 +29,8 @@
     <string name="textview_prso_3">EIP67 water-resistant build can stay under-water for maximum depth of 1 meter up to 30 minutes</string>
     <string name="cons">Cons</string>
     <string name="text_cons_1">Not water-proof</string>
+    <string name="battery_rating_value">8.6</string>
+    <string name="camera_rating_value">9.6</string>
+    <string name="control_and_function_rating_value">7.5</string>
+    <string name="processors_rating_value">9.5</string>
 </resources>

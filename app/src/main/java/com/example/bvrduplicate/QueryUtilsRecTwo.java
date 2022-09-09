@@ -5,6 +5,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+// This class belong to recyclerView2 of Homepage.
+
 public class QueryUtilsRecTwo {
 
     private static final String SAMPLE_JSON_RESPONSE = "{\n" +

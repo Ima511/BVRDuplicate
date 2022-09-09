@@ -1,5 +1,7 @@
 package com.example.bvrduplicate;
 
+// This class belongs to recyclerView 2 of Homepage
+
 public class DataModelTwo {
 
     String productName, numberOfReview;

@@ -6,6 +6,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import java.util.ArrayList;
 
+// This class belongs to recyclerview 1 of Homepage
+
 public class QueryUtilsRecOne {
 
     // Sample JSON for data loading on Home Screen
