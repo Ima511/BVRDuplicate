@@ -334,7 +334,7 @@ public class QueryUtilsRecOne {
 
         ArrayList<DataModel> dataModels = new ArrayList<>();
 
-        String data = "";
+
         try {
             // Create the root JSONObject from the JSON string.
 //            JSONObject jsonRootObject = new JSONObject(SAMPLE_JSON_RESPONSE);
