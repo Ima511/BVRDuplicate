@@ -423,62 +423,63 @@ public class QueryUtilsRecThree {
         try{
             JSONArray jsonArray = new JSONArray(SAMPLE_JSON_RESPONSE);
 
-            String tvFeatureOne = null;
-            String tvFeatureTwo = null;
-            String tvFeatureThree = null;
-            String tvFeatureFour = null;
-
-            String tvFeatureOneRatings = null;
-            String tvFeatureTwoRatings= null;
-            String tvFeatureThreeRatings = null;
-            String tvFeatureFourRatings = null;
-
-            String tvPros1 = null ;
-            String tvPros2 = null;
-            String tvPros3 = null ;
-
-            String tvCons1 = null;
+//            String tvFeatureOne = null;
+//            String tvFeatureTwo = null;
+//            String tvFeatureThree = null;
+//            String tvFeatureFour = null;
+//
+//            String tvFeatureOneRatings = null;
+//            String tvFeatureTwoRatings= null;
+//            String tvFeatureThreeRatings = null;
+//            String tvFeatureFourRatings = null;
+//
+//            String tvPros1 = null ;
+//            String tvPros2 = null;
+//            String tvPros3 = null ;
+//
+//            String tvCons1 = null;
             //Iterate the jsonArray and print the info of JSONObjects
+
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
-                JSONArray jsonFeature = jsonObject.getJSONArray("features");
-                JSONArray jsonPros = jsonObject.getJSONArray("pros");
-                JSONArray jsonCons = jsonObject.getJSONArray("cons");
-
+//                JSONArray jsonFeature = jsonObject.getJSONArray("features");
+//                JSONArray jsonPros = jsonObject.getJSONArray("pros");
+//                JSONArray jsonCons = jsonObject.getJSONArray("cons");
+//
 
 
 
 
                 String tvProductHeading = jsonObject.getString("label") ;
 
-                for (i = 0; i<jsonFeature.length(); i++){
-                    JSONObject jsonTitle = jsonFeature.getJSONObject(i);
+//                for (i = 0; i<jsonFeature.length(); i++){
+//                    JSONObject jsonTitle = jsonFeature.getJSONObject(i);
+//
+//                     tvFeatureOne = jsonTitle.getString("title");
+//                     tvFeatureTwo = jsonTitle.getString("title");
+//                     tvFeatureThree = jsonTitle.getString("title");
+//                     tvFeatureFour = jsonTitle.getString("title");
+//
+//                     tvFeatureOneRatings  = jsonTitle.getString("rating");
+//                     tvFeatureTwoRatings = jsonTitle.getString("rating");
+//                     tvFeatureThreeRatings = jsonTitle.getString("rating");
+//                     tvFeatureFourRatings = jsonTitle.getString("rating");
+//                }
 
-                     tvFeatureOne = jsonTitle.getString("title");
-                     tvFeatureTwo = jsonTitle.getString("title");
-                     tvFeatureThree = jsonTitle.getString("title");
-                     tvFeatureFour = jsonTitle.getString("title");
-
-                     tvFeatureOneRatings  = jsonTitle.getString("rating");
-                     tvFeatureTwoRatings = jsonTitle.getString("rating");
-                     tvFeatureThreeRatings = jsonTitle.getString("rating");
-                     tvFeatureFourRatings = jsonTitle.getString("rating");
-                }
-
-                for(i =0; i<jsonPros.length(); i++){
-                    JSONObject jsonProsText = jsonPros.getJSONObject(i);
-
-                     tvPros1 =jsonProsText.getString("pros") ;
-                     tvPros2 = jsonProsText.getString("pros");
-                    tvPros3 =jsonProsText.getString("pros") ;
-
-                }
-
-                for(i =0; i<jsonCons.length(); i++){
-                    JSONObject jsonConsText = jsonCons.getJSONObject(i);
-                   tvCons1 = jsonConsText.getString("cons");
-
-                }
+//                for(i =0; i<jsonPros.length(); i++){
+//                    JSONObject jsonProsText = jsonPros.getJSONObject(i);
+//
+//                     tvPros1 =jsonProsText.getString("pros") ;
+//                     tvPros2 = jsonProsText.getString("pros");
+//                    tvPros3 =jsonProsText.getString("pros") ;
+//
+//                }
+//
+//                for(i =0; i<jsonCons.length(); i++){
+//                    JSONObject jsonConsText = jsonCons.getJSONObject(i);
+//                   tvCons1 = jsonConsText.getString("cons");
+//
+//                }
                 String tvReviews = jsonObject.getString("total_reviews_count");
                 String ivProductImageCategoryPage =jsonObject.getString("large_image_snippet") ;
 
@@ -486,8 +487,8 @@ public class QueryUtilsRecThree {
 //                    DataModelThree dataModelThree = new DataModelThree(i+1,tvProductHeading,tvFeatureOne, tvFeatureTwo,tvFeatureThree,tvFeatureFour,tvPros1,tvPros2,tvPros3,tvCons1,tvReviews,tvFeatureOneRatings,tvFeatureTwoRatings,tvFeatureThreeRatings,tvFeatureFourRatings,ivProductImageCategoryPage);
 //                    dataModelesThree.add(dataModelThree);
 
-                DataModelThree dataModelThree = new DataModelThree(i+1,tvProductHeading,tvFeatureOne, tvFeatureTwo,tvFeatureThree,tvFeatureFour,tvPros1,tvPros2,tvPros3,tvCons1,tvReviews,tvFeatureOneRatings,tvFeatureTwoRatings,tvFeatureThreeRatings,tvFeatureFourRatings,ivProductImageCategoryPage);
-                dataModelesThree.add(dataModelThree);
+               DataModelThree dataModelThree = new DataModelThree(i+1,tvProductHeading,tvReviews,ivProductImageCategoryPage);
+               dataModelesThree.add(dataModelThree);
             }
 
         } catch (Exception e) {

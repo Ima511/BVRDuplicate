@@ -37,16 +37,21 @@ public class RecyclerThreeCategoryAdapter extends RecyclerView.Adapter<RecyclerT
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         final DataModelThree listItemThree = dataModelesThree.get(position);
+   //     holder.tvRankValue.setText(dataModelesThree.get(position).tvRankValue);
         holder.tvRankValue.setText(dataModelesThree.get(position).tvRankValue);
+
+
+
+
         holder.tvProductHeading.setText(dataModelesThree.get(position).tvProductHeading);
-        holder.tvFeatureOne.setText(dataModelesThree.get(position).tvFeatureOne);
-        holder.tvFeatureTwo.setText(dataModelesThree.get(position).tvFeatureTwo);
-        holder.tvFeatureThree.setText(dataModelesThree.get(position).tvFeatureThree);
-        holder.tvFeatureFour.setText(dataModelesThree.get(position).tvFeatureFour);
-        holder.tvPros1.setText(dataModelesThree.get(position).tvPros1);
-        holder.tvPros2.setText(dataModelesThree.get(position).tvPros2);
-        holder.tvPros3.setText(dataModelesThree.get(position).tvPros3);
-        holder.tvCons1.setText(dataModelesThree.get(position).tvCons1);
+//        holder.tvFeatureOne.setText(dataModelesThree.get(position).tvFeatureOne);
+//        holder.tvFeatureTwo.setText(dataModelesThree.get(position).tvFeatureTwo);
+//        holder.tvFeatureThree.setText(dataModelesThree.get(position).tvFeatureThree);
+//        holder.tvFeatureFour.setText(dataModelesThree.get(position).tvFeatureFour);
+//        holder.tvPros1.setText(dataModelesThree.get(position).tvPros1);
+//        holder.tvPros2.setText(dataModelesThree.get(position).tvPros2);
+//        holder.tvPros3.setText(dataModelesThree.get(position).tvPros3);
+//        holder.tvCons1.setText(dataModelesThree.get(position).tvCons1);
         holder.tvReviews.setText(dataModelesThree.get(position).tvReviews);
 
 
@@ -71,19 +76,19 @@ public class RecyclerThreeCategoryAdapter extends RecyclerView.Adapter<RecyclerT
 
             tvRankValue = itemView.findViewById(R.id.tvRankValue);
             tvProductHeading = itemView.findViewById(R.id.tvProductHeading);
-            tvFeatureOne = itemView.findViewById(R.id.tvFeatureOne);
-            tvFeatureTwo = itemView.findViewById(R.id.tvFeatureTwo);
-            tvFeatureThree = itemView.findViewById(R.id.tvFeature3);
-            tvFeatureFour = itemView.findViewById(R.id.tvFeature4);
-            tvPros1 = itemView.findViewById(R.id.tvPros1);
-            tvPros2 = itemView.findViewById(R.id.tvPros2);
-            tvPros3 = itemView.findViewById(R.id.tvPros3);
-            tvCons1 = itemView.findViewById(R.id.tvCons1);
+//            tvFeatureOne = itemView.findViewById(R.id.tvFeatureOne);
+//            tvFeatureTwo = itemView.findViewById(R.id.tvFeatureTwo);
+//            tvFeatureThree = itemView.findViewById(R.id.tvFeature3);
+//            tvFeatureFour = itemView.findViewById(R.id.tvFeature4);
+//            tvPros1 = itemView.findViewById(R.id.tvPros1);
+//            tvPros2 = itemView.findViewById(R.id.tvPros2);
+//            tvPros3 = itemView.findViewById(R.id.tvPros3);
+//            tvCons1 = itemView.findViewById(R.id.tvCons1);
             tvReviews = itemView.findViewById(R.id.tvReviews);
-            tvFeatureOneRatings = itemView.findViewById(R.id.tvFeatureOneRatings);
-            tvFeatureTwoRatings = itemView.findViewById(R.id.tvFeatureTwoRatings);
-            tvFeatureThreeRatings = itemView.findViewById(R.id.tvFeaturesRatings3);
-            tvFeatureFourRatings = itemView.findViewById(R.id.tvFeaturesRatings4);
+//            tvFeatureOneRatings = itemView.findViewById(R.id.tvFeatureOneRatings);
+//            tvFeatureTwoRatings = itemView.findViewById(R.id.tvFeatureTwoRatings);
+//            tvFeatureThreeRatings = itemView.findViewById(R.id.tvFeaturesRatings3);
+//            tvFeatureFourRatings = itemView.findViewById(R.id.tvFeaturesRatings4);
             ivProductImageCategoryPage = itemView.findViewById(R.id.ivProductImageCategoryPage);
 
 
