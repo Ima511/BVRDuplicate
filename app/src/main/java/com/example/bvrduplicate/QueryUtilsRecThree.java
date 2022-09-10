@@ -422,7 +422,6 @@ public class QueryUtilsRecThree {
 
         try{
             JSONArray jsonArray = new JSONArray(SAMPLE_JSON_RESPONSE);
-
 //            String tvFeatureOne = null;
 //            String tvFeatureTwo = null;
 //            String tvFeatureThree = null;
@@ -445,11 +444,14 @@ public class QueryUtilsRecThree {
 //                JSONArray jsonFeature = jsonObject.getJSONArray("features");
 //                JSONArray jsonPros = jsonObject.getJSONArray("pros");
 //                JSONArray jsonCons = jsonObject.getJSONArray("cons");
+//                JSONObject jsonFeatures = jsonObject.getJSONObject("features");
+//                JSONArray jsonTitle = jsonFeatures.getJSONArray("title");
 //
-
-
-
-
+//                for (i =0;i<jsonTitle.length(); i++){
+//                    JSONObject jsontitle = jsonTitle.getJSONObject(i);
+//                    String tvFeatureOne = jsontitle.getString("title");
+//                }
+//
                 String tvProductHeading = jsonObject.getString("label") ;
 
 //                for (i = 0; i<jsonFeature.length(); i++){

@@ -38,7 +38,7 @@ public class RecyclerThreeCategoryAdapter extends RecyclerView.Adapter<RecyclerT
 
         final DataModelThree listItemThree = dataModelesThree.get(position);
    //     holder.tvRankValue.setText(dataModelesThree.get(position).tvRankValue);
-        holder.tvRankValue.setText(dataModelesThree.get(position).tvRankValue);
+        holder.tvRankValue.setText(String.valueOf(dataModelesThree.get(position).tvRankValue));
 
 
 
