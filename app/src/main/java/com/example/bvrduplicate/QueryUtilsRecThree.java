@@ -1,7 +1,11 @@
 package com.example.bvrduplicate;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
+
 
 import java.util.ArrayList;
 
@@ -412,6 +416,7 @@ public class QueryUtilsRecThree {
             "    }\n" +
             "]";
 
+
     public QueryUtilsRecThree() {
 
     }
@@ -419,10 +424,16 @@ public class QueryUtilsRecThree {
     public static ArrayList<DataModelThree> extractDataModelThree(){
 
         ArrayList<DataModelThree> dataModelesThree = new ArrayList<>();
+        ObjectMapper objectMapper = new ObjectMapper();
+
 
         try{
             JSONArray jsonArray = new JSONArray(SAMPLE_JSON_RESPONSE);
-//            String tvFeatureOne = null;
+            JsonNode node = objectMapper.readValue(SAMPLE_JSON_RESPONSE, JsonNode.class);
+
+
+
+        //   String tvFeatureOne = null;
 //            String tvFeatureTwo = null;
 //            String tvFeatureThree = null;
 //            String tvFeatureFour = null;
@@ -453,6 +464,36 @@ public class QueryUtilsRecThree {
 //                }
 //
                 String tvProductHeading = jsonObject.getString("label") ;
+
+                // Labeling of all features
+             String   tvFeatureOne = String.valueOf(jsonObject.getJSONArray("features").getJSONObject(0).getString("title"));
+             String   tvFeatureTwo = String.valueOf(jsonObject.getJSONArray("features").getJSONObject(1).getString("title"));
+             String   tvFeatureThree = String.valueOf(jsonObject.getJSONArray("features").getJSONObject(2).getString("title"));
+             String   tvFeatureFour = String.valueOf(jsonObject.getJSONArray("features").getJSONObject(3).getString("title"));
+
+             // Rating of all features
+            double   tvFeatureOneRating = Double.parseDouble(jsonObject.getJSONArray("features").getJSONObject(0).getString("rating"));
+            double  tvFeatureTwoRatings = Double.parseDouble(jsonObject.getJSONArray("features").getJSONObject(1).getString("rating"));
+            double   tvFeatureThreeRatings = Double.parseDouble(jsonObject.getJSONArray("features").getJSONObject(2).getString("rating"));
+            double  tvFeatureFourRatings = Double.parseDouble(jsonObject.getJSONArray("features").getJSONObject(3).getString("rating"));
+
+//            double sumOfRatings = tvFeatureOneRating + tvFeatureTwoRatings + tvFeatureThreeRatings + tvFeatureFourRatings;
+//            double overAllRatingLong = (sumOfRatings)/4 ;
+//
+//            double overAllRatingDouble = (int)(overAllRatingLong *10);
+//            double overAllRating = overAllRatingDouble/10;
+
+//                Long overAllRatingLong = (Long) jsonObject.get("score_out_of_10");
+//                int overAllRatingDouble = (int) (overAllRatingLong * 100);
+//                double overAllRating = (double) overAllRatingDouble/100;
+
+                double overAllRatingLong =  jsonObject.getDouble("score_out_of_10")*100;
+                double overAllRatingDouble = (int )overAllRatingLong/10;
+                double overAllRating = (double) overAllRatingDouble/10;
+              //  double overAllRating = overAllRatingDouble/10;
+
+
+
 
 //                for (i = 0; i<jsonFeature.length(); i++){
 //                    JSONObject jsonTitle = jsonFeature.getJSONObject(i);
@@ -489,7 +530,7 @@ public class QueryUtilsRecThree {
 //                    DataModelThree dataModelThree = new DataModelThree(i+1,tvProductHeading,tvFeatureOne, tvFeatureTwo,tvFeatureThree,tvFeatureFour,tvPros1,tvPros2,tvPros3,tvCons1,tvReviews,tvFeatureOneRatings,tvFeatureTwoRatings,tvFeatureThreeRatings,tvFeatureFourRatings,ivProductImageCategoryPage);
 //                    dataModelesThree.add(dataModelThree);
 
-               DataModelThree dataModelThree = new DataModelThree(i+1,tvProductHeading,tvReviews,ivProductImageCategoryPage);
+               DataModelThree dataModelThree = new DataModelThree(i+1,tvProductHeading,tvFeatureOne,tvFeatureTwo,tvFeatureThree,tvFeatureFour,tvReviews,ivProductImageCategoryPage,tvFeatureOneRating,tvFeatureTwoRatings,tvFeatureThreeRatings,tvFeatureFourRatings,overAllRating);
                dataModelesThree.add(dataModelThree);
             }
 

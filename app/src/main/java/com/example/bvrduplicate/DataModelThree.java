@@ -5,44 +5,58 @@ package com.example.bvrduplicate;
 public class DataModelThree {
 
     int  tvRankValue;
+    double tvFeatureOneRatings,
+            tvFeatureTwoRatings,
+            tvFeatureThreeRatings,
+            tvFeatureFourRatings,
+            overAllRatings;
     String tvProductHeading,
-//            tvFeatureOne,
-//            tvFeatureTwo,
-//            tvFeatureThree,
-//            tvFeatureFour,
+            tvFeatureOne,
+            tvFeatureTwo,
+            tvFeatureThree,
+            tvFeatureFour,
 //            tvPros1,tvPros2,
 //            tvPros3,
 //            tvCons1,
             tvReviews,
             ivProductImageCategoryPage;
-//            tvFeatureOneRatings,
-//             tvFeatureTwoRatings,
-//            tvFeatureThreeRatings,
-//            tvFeatureFourRatings;
+
+
 
     public DataModelThree(int tvRankValue,
                           String tvProductHeading,
-
+                          String tvFeatureOne,
+                          String tvFeatureTwo,
+                          String tvFeatureThree,
+                          String tvFeatureFour,
                           String tvReviews,
-
-                          String ivProductImageCategoryPage) {
+                          String ivProductImageCategoryPage,
+                          double tvFeatureOneRatings,
+                          double tvFeatureTwoRatings,
+                          double tvFeatureThreeRatings,
+                          double tvFeatureFourRatings,
+                          double overAllRatings
+                          ) {
         this.tvRankValue = tvRankValue;
         this.tvProductHeading = tvProductHeading;
-//        this.tvFeatureOne = tvFeatureOne;
-//        this.tvFeatureTwo = tvFeatureTwo;
-//        this.tvFeatureThree = tvFeatureThree;
-//        this.tvFeatureFour = tvFeatureFour;
+        this.tvFeatureOne = tvFeatureOne;
+        this.tvFeatureTwo = tvFeatureTwo;
+        this.tvFeatureThree = tvFeatureThree;
+        this.tvFeatureFour = tvFeatureFour;
 //        this.tvPros1 = tvPros1;
 //        this.tvPros2 = tvPros2;
 //        this.tvPros3 = tvPros3;
 //        this.tvCons1 = tvCons1;
         this.tvReviews = tvReviews;
-//        this.tvFeatureOneRatings = tvFeatureOneRatings;
-//        this.tvFeatureTwoRatings = tvFeatureTwoRatings;
-//        this.tvFeatureThreeRatings = tvFeatureThreeRatings;
-//        this.tvFeatureFourRatings  = tvFeatureFourRatings;
+        this.tvFeatureOneRatings = tvFeatureOneRatings;
+        this.tvFeatureTwoRatings = tvFeatureTwoRatings;
+        this.tvFeatureThreeRatings = tvFeatureThreeRatings;
+        this.tvFeatureFourRatings  = tvFeatureFourRatings;
+        this.overAllRatings = overAllRatings;
         this.ivProductImageCategoryPage = ivProductImageCategoryPage;
     }
+
+
 
     public int getTvRankValue() {
         return tvRankValue;
@@ -60,37 +74,37 @@ public class DataModelThree {
         this.tvProductHeading = tvProductHeading;
     }
 //
-//    public String getTvFeatureOne() {
-//        return tvFeatureOne;
-//    }
-//
-//    public void setTvFeatureOne(String tvFeatureOne) {
-//        this.tvFeatureOne = tvFeatureOne;
-//    }
-//
-//    public String getTvFeatureTwo() {
-//        return tvFeatureTwo;
-//    }
-//
-//    public void setTvFeatureTwo(String tvFeatureTwo) {
-//        this.tvFeatureTwo = tvFeatureTwo;
-//    }
-//
-//    public String getTvFeatureThree() {
-//        return tvFeatureThree;
-//    }
-//
-//    public void setTvFeatureThree(String tvFeatureThree) {
-//        this.tvFeatureThree = tvFeatureThree;
-//    }
-//
-//    public String getTvFeatureFour() {
-//        return tvFeatureFour;
-//    }
-//
-//    public void setTvFeatureFour(String tvFeatureFour) {
-//        this.tvFeatureFour = tvFeatureFour;
-//    }
+    public String getTvFeatureOne() {
+        return tvFeatureOne;
+    }
+
+    public void setTvFeatureOne(String tvFeatureOne) {
+        this.tvFeatureOne = tvFeatureOne;
+    }
+
+    public String getTvFeatureTwo() {
+        return tvFeatureTwo;
+    }
+
+    public void setTvFeatureTwo(String tvFeatureTwo) {
+        this.tvFeatureTwo = tvFeatureTwo;
+    }
+
+    public String getTvFeatureThree() {
+        return tvFeatureThree;
+    }
+
+    public void setTvFeatureThree(String tvFeatureThree) {
+        this.tvFeatureThree = tvFeatureThree;
+    }
+
+    public String getTvFeatureFour() {
+        return tvFeatureFour;
+    }
+
+    public void setTvFeatureFour(String tvFeatureFour) {
+        this.tvFeatureFour = tvFeatureFour;
+    }
 //
 //    public String getTvPros1() {
 //        return tvPros1;
@@ -124,38 +138,43 @@ public class DataModelThree {
 //        this.tvCons1 = tvCons1;
 //    }
 //
-//    public String getTvFeatureOneRatings() {
-//        return tvFeatureOneRatings;
-//    }
-//
-//    public void setTvFeatureOneRatings(String tvFeatureOneRatings) {
-//        this.tvFeatureOneRatings = tvFeatureOneRatings;
-//    }
-//
-//    public String getTvFeatureTwoRatings() {
-//        return tvFeatureTwoRatings;
-//    }
-//
-//    public void setTvFeatureTwoRatings(String tvFeatureTwoRatings) {
-//        this.tvFeatureTwoRatings = tvFeatureTwoRatings;
-//    }
-//
-//    public String getTvFeatureThreeRatings() {
-//        return tvFeatureThreeRatings;
-//    }
-//
-//    public void setTvFeatureThreeRatings(String tvFeatureThreeRatings) {
-//        this.tvFeatureThreeRatings = tvFeatureThreeRatings;
-//    }
-//
-//    public String getTvFeatureFourRatings() {
-//        return tvFeatureFourRatings;
-//    }
-//
-//    public void setTvFeatureFourRatings(String tvFeatureFourRatings) {
-//        this.tvFeatureFourRatings = tvFeatureFourRatings;
-//    }
+    public double getTvFeatureOneRatings() {
+        return tvFeatureOneRatings;
+    }
 
+    public void setTvFeatureOneRatings(double tvFeatureOneRatings) {
+        this.tvFeatureOneRatings = tvFeatureOneRatings;
+    }
+
+    public double getTvFeatureTwoRatings() {
+        return tvFeatureTwoRatings;
+    }
+
+    public void setTvFeatureTwoRatings(double tvFeatureTwoRatings) {
+        this.tvFeatureTwoRatings = tvFeatureTwoRatings;
+    }
+
+    public double getTvFeatureThreeRatings() {
+        return tvFeatureThreeRatings;
+    }
+
+    public void setTvFeatureThreeRatings(double tvFeatureThreeRatings) {
+        this.tvFeatureThreeRatings = tvFeatureThreeRatings;
+    }
+
+    public double getTvFeatureFourRatings() {
+        return tvFeatureFourRatings;
+    }
+
+
+
+    public double getOverAllRatings() {
+        return overAllRatings;
+    }
+
+    public void setOverAllRatings(double overAllRatings) {
+        this.overAllRatings = overAllRatings;
+    }
     public String getTvReviews() {
         return tvReviews;
     }
