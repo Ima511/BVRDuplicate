@@ -477,6 +477,19 @@ public class QueryUtilsRecThree {
             double   tvFeatureThreeRatings = Double.parseDouble(jsonObject.getJSONArray("features").getJSONObject(2).getString("rating"));
             double  tvFeatureFourRatings = Double.parseDouble(jsonObject.getJSONArray("features").getJSONObject(3).getString("rating"));
 
+            // Overall rating value == score out of 10
+                double overAllRatingLong =  jsonObject.getDouble("score_out_of_10")*100;
+                double overAllRatingDouble = (int )overAllRatingLong/10;
+                double overAllRating = (double) overAllRatingDouble/10;
+
+            //    Pros
+                String tvPros1 = jsonObject.getJSONObject("pros_cons").getJSONArray("pros").getString(0);
+                String tvPros2 = jsonObject.getJSONObject("pros_cons").getJSONArray("pros").getString(1);
+                String tvPros3 = jsonObject.getJSONObject("pros_cons").getJSONArray("pros").getString(2);
+
+            // Cons
+
+            String tvCons1 = jsonObject.getJSONObject("pros_cons").getJSONArray("cons").getString(0);
 //            double sumOfRatings = tvFeatureOneRating + tvFeatureTwoRatings + tvFeatureThreeRatings + tvFeatureFourRatings;
 //            double overAllRatingLong = (sumOfRatings)/4 ;
 //
@@ -487,9 +500,6 @@ public class QueryUtilsRecThree {
 //                int overAllRatingDouble = (int) (overAllRatingLong * 100);
 //                double overAllRating = (double) overAllRatingDouble/100;
 
-                double overAllRatingLong =  jsonObject.getDouble("score_out_of_10")*100;
-                double overAllRatingDouble = (int )overAllRatingLong/10;
-                double overAllRating = (double) overAllRatingDouble/10;
               //  double overAllRating = overAllRatingDouble/10;
 
 
@@ -530,7 +540,13 @@ public class QueryUtilsRecThree {
 //                    DataModelThree dataModelThree = new DataModelThree(i+1,tvProductHeading,tvFeatureOne, tvFeatureTwo,tvFeatureThree,tvFeatureFour,tvPros1,tvPros2,tvPros3,tvCons1,tvReviews,tvFeatureOneRatings,tvFeatureTwoRatings,tvFeatureThreeRatings,tvFeatureFourRatings,ivProductImageCategoryPage);
 //                    dataModelesThree.add(dataModelThree);
 
-               DataModelThree dataModelThree = new DataModelThree(i+1,tvProductHeading,tvFeatureOne,tvFeatureTwo,tvFeatureThree,tvFeatureFour,tvReviews,ivProductImageCategoryPage,tvFeatureOneRating,tvFeatureTwoRatings,tvFeatureThreeRatings,tvFeatureFourRatings,overAllRating);
+               DataModelThree dataModelThree = new DataModelThree(i+1,
+                       tvProductHeading,
+                       tvFeatureOne,tvFeatureTwo,tvFeatureThree,
+                       tvFeatureFour,tvReviews,ivProductImageCategoryPage,
+                       tvFeatureOneRating, tvFeatureTwoRatings,tvFeatureThreeRatings,tvFeatureFourRatings, overAllRating,
+                       tvPros1,tvPros2,tvPros3,
+                       tvCons1);
                dataModelesThree.add(dataModelThree);
             }
 

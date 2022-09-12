@@ -15,9 +15,9 @@ public class DataModelThree {
             tvFeatureTwo,
             tvFeatureThree,
             tvFeatureFour,
-//            tvPros1,tvPros2,
-//            tvPros3,
-//            tvCons1,
+            tvPros1,tvPros2,
+            tvPros3,
+            tvCons1,
             tvReviews,
             ivProductImageCategoryPage;
 
@@ -35,7 +35,11 @@ public class DataModelThree {
                           double tvFeatureTwoRatings,
                           double tvFeatureThreeRatings,
                           double tvFeatureFourRatings,
-                          double overAllRatings
+                          double overAllRatings,
+                          String tvPros1,
+                          String tvPros2,
+                          String tvPros3,
+                          String tvCons1
                           ) {
         this.tvRankValue = tvRankValue;
         this.tvProductHeading = tvProductHeading;
@@ -43,10 +47,10 @@ public class DataModelThree {
         this.tvFeatureTwo = tvFeatureTwo;
         this.tvFeatureThree = tvFeatureThree;
         this.tvFeatureFour = tvFeatureFour;
-//        this.tvPros1 = tvPros1;
-//        this.tvPros2 = tvPros2;
-//        this.tvPros3 = tvPros3;
-//        this.tvCons1 = tvCons1;
+        this.tvPros1 = tvPros1;
+        this.tvPros2 = tvPros2;
+        this.tvPros3 = tvPros3;
+        this.tvCons1 = tvCons1;
         this.tvReviews = tvReviews;
         this.tvFeatureOneRatings = tvFeatureOneRatings;
         this.tvFeatureTwoRatings = tvFeatureTwoRatings;
@@ -106,29 +110,29 @@ public class DataModelThree {
         this.tvFeatureFour = tvFeatureFour;
     }
 //
-//    public String getTvPros1() {
-//        return tvPros1;
-//    }
-//
-//    public void setTvPros1(String tvPros1) {
-//        this.tvPros1 = tvPros1;
-//    }
-//
-//    public String getTvPros2() {
-//        return tvPros2;
-//    }
-//
-//    public void setTvPros2(String tvPros2) {
-//        this.tvPros2 = tvPros2;
-//    }
-//
-//    public String getTvPros3() {
-//        return tvPros3;
-//    }
-//
-//    public void setTvPros3(String tvPros3) {
-//        this.tvPros3 = tvPros3;
-//    }
+    public String getTvPros1() {
+        return tvPros1;
+    }
+
+    public void setTvPros1(String tvPros1) {
+        this.tvPros1 = tvPros1;
+    }
+
+    public String getTvPros2() {
+        return tvPros2;
+    }
+
+    public void setTvPros2(String tvPros2) {
+        this.tvPros2 = tvPros2;
+    }
+
+    public String getTvPros3() {
+        return tvPros3;
+    }
+
+    public void setTvPros3(String tvPros3) {
+        this.tvPros3 = tvPros3;
+    }
 //
 //    public String getTvCons1() {
 //        return tvCons1;
