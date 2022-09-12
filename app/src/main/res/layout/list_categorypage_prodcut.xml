@@ -130,13 +130,16 @@
 
         <TextView
             android:id="@+id/tvFeatureOne"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_marginTop="32dp"
+            android:ellipsize="end"
             android:fontFamily="@font/dm_sans"
+            android:maxLines="1"
             android:text="@string/battery"
             android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/tvFeatureOneRatings"
             app:layout_constraintStart_toEndOf="@+id/ivProductImageCategoryPage"
             app:layout_constraintTop_toBottomOf="@+id/btnAmazon" />
 
@@ -237,13 +240,16 @@
 
         <TextView
             android:id="@+id/tvFeatureTwo"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_marginTop="8dp"
+            android:ellipsize="end"
             android:fontFamily="@font/dm_sans"
+            android:maxLines="1"
             android:text="@string/camera"
             android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/tvFeatureTwoRatings"
             app:layout_constraintStart_toEndOf="@+id/ivProductImageCategoryPage"
             app:layout_constraintTop_toBottomOf="@+id/view2" />
 
@@ -262,14 +268,22 @@
 
         <TextView
             android:id="@+id/tvFeature3"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_marginTop="8dp"
+
             android:fontFamily="@font/dm_sans"
+
             android:text="@string/control_and_functionality"
+            app:layout_constraintEnd_toStartOf="@+id/tvFeaturesRatings3"
             app:layout_constraintStart_toEndOf="@+id/ivProductImageCategoryPage"
-            app:layout_constraintTop_toBottomOf="@+id/view3" />
+            app:layout_constraintTop_toBottomOf="@+id/view3"
+            android:ellipsize="end"
+            android:maxLines="1"
+
+
+            />
 
         <View
             android:id="@+id/view4"
@@ -286,13 +300,16 @@
 
         <TextView
             android:id="@+id/tvFeature4"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_marginTop="8dp"
+            android:ellipsize="end"
             android:fontFamily="@font/dm_sans"
+            android:maxLines="1"
             android:text="@string/processor"
             android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/tvFeaturesRatings4"
             app:layout_constraintStart_toEndOf="@+id/ivProductImageCategoryPage"
             app:layout_constraintTop_toBottomOf="@+id/view4" />
 
